@@ -642,7 +642,7 @@ void AccelStepper::setPinsInverted(bool pin1Invert, bool pin2Invert, bool pin3In
 // Blocks until the target position is reached and stopped
 void AccelStepper::runToPosition()
 {
-    while (run())
+    while (run(false))
 	YIELD; // Let system housekeeping occur
 }
 
